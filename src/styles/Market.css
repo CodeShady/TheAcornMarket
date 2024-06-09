@@ -1,0 +1,224 @@
+div.market-container {
+    animation: scale-in-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    z-index: 20;
+    position: absolute;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-bg-primary);
+}
+
+button.market-button {
+    position: relative;
+    float: right;
+    margin-bottom: 20px;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    padding-top: 5px;
+}
+
+button.market-button img {
+    height: 35px;
+    width: auto;
+}
+
+/* "Market is closed" reminder banner */
+div.market-closed-reminder {
+    /* position: absolute; */
+    /* top: -28px; */
+    /* left: 20px; */
+    /* right: 20px; */
+    background-color: #ff8e78;
+    padding: 10px 10px;
+    border-radius: 20px;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Player Balance Container */
+.market-container .money-container {
+    background-color: var(--color-bg-second);
+}
+
+/* Buttons within the market container */
+.market-container button {
+    background-color: var(--color-bg-second);
+}
+
+/* Market Subtitle Heading */
+.market-subtitle {
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+/* Market Selling/Trading Popup */
+div.popup-background {
+    z-index: 10;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+div.popup-content {
+    z-index: 20;
+    position: absolute;
+    text-align: center;
+	background: linear-gradient(321deg, #77a2b9, #E0F4FF);
+	width: 300px;
+	height: auto;
+	border-radius: 20px;
+}
+
+/* Trade Item Container */
+#trade-item-modal {
+    z-index: 30;
+    bottom: -80px;
+}
+
+div.trade-item-container {
+    background: var(--color-bg-second) !important;
+}
+
+/* Image container
+    - item name
+    - image
+*/
+div.trade-item-container .image-container {
+    background-color: red;
+}
+
+/* Price Chart */
+.market-item-price-chart-background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 95px;
+    z-index: -1;
+    background-color: #ffd7a3;
+}
+
+.market-item-price-chart {
+    /* height: 80px !important; */
+    position: absolute;
+    bottom: 85px;
+    left: -5px;
+    width: 102% !important;
+    z-index: -1;
+}
+
+/* Trade Button */
+button.trade-button {
+    background-color: var(--color-bg-button);
+    border-radius: 50px;
+    padding: 15px 0;
+}
+
+div.trade-buttons-container {
+    display: flex;
+    gap: 20px;
+}
+
+div.trade-buttons-container > input.trade-amount-field {
+    width: 40px;
+    font-size: 20px;
+    background: transparent;
+    text-align: center;
+    margin-top: 5px;
+    padding: 0;
+    border: none;
+}
+
+div.trade-buttons-container > input.trade-amount-field:focus {
+    outline: none;
+}
+
+div.trade-buttons-container > div {
+    width: 100%;
+}
+
+div.trade-buttons-container > div > div.price {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* background: linear-gradient(300deg, #fff0db00, #ffe1ba); */
+
+/* Market Items */
+div.market-item-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+}
+
+div.market-item {
+    position: relative;
+    text-align: center;
+    background-color: var(--color-bg-second);
+    width: auto;
+    height: 115px;
+    border-radius: 20px;
+    padding: 0 10px 3px 10px;
+}
+
+/* Market Item Rarity */
+.rarity-c {}
+.rarity-u {}
+.rarity-r {
+    background: linear-gradient(333deg, #70aeff66, #ffe1ba);
+}
+.rarity-e {
+    background: linear-gradient(333deg, #cb69ff33, #ffe1ba);
+}
+
+.rarity-l {
+    background: linear-gradient(333deg, #69ecff6e, #ffe1ba);
+    /* background: linear-gradient(324deg, #69ecff, #ffe1ba, #ffe1ba); */
+}
+
+/* Little bubble that appears to the top left of a conatainer
+   ⚠️ Parent must use relative position!
+*/
+div.container-bubble {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    background-color: var(--color-bg-second-dark);
+    padding: 4px 6px;
+    min-width: 20px;
+    border-radius: 20px;
+}
+
+div.market-item img {
+    margin-top: 20px;
+    height: 45%;
+    width: auto;
+}
+
+div.market-item p {
+    font-size: 14px;
+}
+
+@keyframes scale-in-center {
+    0% {
+        -webkit-transform: scale(0.5);
+                transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        opacity: 1;
+    }
+}

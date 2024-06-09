@@ -1,0 +1,208 @@
+.App {
+	/* text-align: center; */
+	width: auto;
+	height: auto;
+	padding: 20px;
+	/* background-color: orange; */
+}
+
+nav.bottom-nav {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 20px;
+	/* background-color: green; */
+}
+
+/* Contanier which displays the money count */
+div.money-container {
+	padding: 8px 15px;
+	font-size: 22px;
+	border-radius: 20px;
+	/* margin-top: 15px; */
+	background-color: var(--color-bg-primary);
+	width: -moz-fit-content;
+	width: fit-content;
+	color: white;
+}
+
+/* Player's Boat / Animation */
+div.player-boat-container {
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--color-sky );
+}
+
+div.player-boat {
+	position: absolute;
+	bottom: 35%;
+	text-align: center;
+	/* z-index: 1; */
+	width: 100%;
+	height: auto;
+	/* background-color: red; */
+	animation: boat-bob 3s cubic-bezier(0.645, 0.045, 0.355, 1.000) infinite alternate both;
+}
+
+/* Animated Wave */
+.animated-wave-svg {
+	position: absolute;
+	bottom: 35%;
+	left: 0;
+	right: 0;
+}
+.animated-wave-filler {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 36%;
+	background-color: var(--color-ocean);
+}
+
+/* Caught Fish Container */
+div.caught-item-container {
+	z-index: 10;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+div.caught-item-container .caught-item {
+	text-align: center;
+	background: linear-gradient(321deg, #77a2b9, #E0F4FF);
+	width: 300px;
+	height: auto;
+	border-radius: 20px;
+	overflow: hidden;
+	animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+div.caught-item-container>.caught-item img {
+	margin: 20px 0;
+	height: 120px;
+	width: auto;
+}
+
+/* Catching and fishing button */
+button.reel-in {
+	background-color: #ff7373;
+	color: #fff;
+	transition: width 0.5s ease-in-out;
+	animation: scale-up-center 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate;
+}
+
+/* Fade In Animation Element on App.js */
+div.fade-in-loading-animation {
+	z-index: 100;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: var(--color-bg-primary);
+	animation: fade-out 1s cubic-bezier(0.190, 1.000, 0.220, 1.000) 2s both;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+div.fade-in-loading-animation img.icon {
+	height: 80px;
+	animation: friendly-shake 2s infinite 1s;
+}
+
+div.fade-in-loading-animation .version-label {
+	position: absolute;
+	bottom: 20px;
+	text-align: center;
+	color: #69655e;
+}
+
+/**
+ * ----------------------------------------
+ * animations
+ * ----------------------------------------
+ */
+@keyframes friendly-shake {
+
+	0%,
+	20%,
+	100% {
+		transform: rotate(0deg);
+		/* No rotation at start, after shaking, and during pause */
+	}
+
+	10% {
+		transform: rotate(10deg);
+		/* Rotate 10 degrees clockwise */
+	}
+
+	15% {
+		transform: rotate(-10deg);
+		/* Rotate 10 degrees counterclockwise */
+	}
+}
+
+@keyframes fade-out {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+		visibility: hidden;
+        pointer-events: none;
+	}
+}
+
+@keyframes slide-top {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(100px);
+		transform: translateY(100px);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+@keyframes scale-up-center {
+	0% {
+		-webkit-transform: scale(0.9);
+		transform: scale(0.9);
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+@keyframes boat-bob {
+	0% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	100% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+}

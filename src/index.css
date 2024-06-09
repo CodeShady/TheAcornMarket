@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+:root {
+	--color-bg-primary: #FFEED9;
+	--color-bg-second: #FFE1BB;
+	--color-bg-second-dark: #ffcb88;
+	--color-bg-button: #f5b374;
+	/* --color-bg-button: #ffd7a3; */
+	--color-sky: #e0f1ff;
+	--color-ocean: #39A7FF;
+	--color-text-dark: #323232;
+}
+
+* {
+	font-family: "Poetsen One", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	margin: 0;
+	padding: 0;
+	color: var(--color-text-dark);
+
+	/* Disable Magnifying Glass */
+	-webkit-touch-callout: none;
+	-webkit-user-callout: none;
+	-webkit-user-drag: none;
+	-webkit-user-modify: none;
+	-webkit-highlight: none;
+	-webkit-user-select: none;
+}
+
+body {
+	background-color: var(--color-bg-primary);
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	padding: 20px 0;
+	width: 100%;
+	font-size: 20px;
+	background-color: var(--color-bg-primary);
+	border: 0;
+	border-radius: 20px;
+	transition-duration: 0.2s;
+}
+button:disabled {
+	opacity: 0.3;
+}
+
+.disabled {
+	opacity: 0.3;
+}
+
+img.icon {
+	margin-bottom: -8px;
+	margin-right: 8px;
+}
+
+/* Text Colors */
+.text-grey { color: #6e6e6e; }
+.text-dark { color: var(--color-text-dark); }
+.text-bg-primary { color: var(--color-bg-primary); }

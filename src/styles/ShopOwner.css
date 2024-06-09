@@ -1,0 +1,36 @@
+.shop-owner {
+    margin-top: 20px;
+    height: 200px;
+    width: 100%;
+    background-color: red;
+    /* overflow: hidden; */
+}
+
+
+.shop-owner .owner-image {
+    float: right;
+    height: 340px;
+    width: 180px;
+    background-color: green;
+    animation: friendly-shake 2s infinite 1s;
+}
+
+@keyframes owner {
+
+	0%,
+	20%,
+	100% {
+		transform: rotate(0deg);
+		/* No rotation at start, after shaking, and during pause */
+	}
+
+	10% {
+		transform: rotate(10deg);
+		/* Rotate 10 degrees clockwise */
+	}
+
+	15% {
+		transform: rotate(-10deg);
+		/* Rotate 10 degrees counterclockwise */
+	}
+}

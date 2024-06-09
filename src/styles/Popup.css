@@ -1,0 +1,23 @@
+div.popup-modal {
+    z-index: 30;
+	position: fixed;
+    height: 100vh;
+    width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+div.popup-modal > div.modal-content {
+    padding: 20px;
+    background: var(--color-bg-second) !important;
+	width: 300px;
+	height: auto;
+	border-radius: 20px;
+	animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
